@@ -19,7 +19,7 @@ export async function GET(request: Request) {
 	try {
 		connectToDB()
 
-		const products = await Product.find({}).limit(10)
+		const products = await Product.find({})
 
 		if (!products) throw new Error('No product fetched')
 
